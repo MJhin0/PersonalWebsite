@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <script>
+        var getQuote = function() {
+            var request = new XMLHttpRequest();
+            request.open("GET", "https://api.quotable.io/random", true)
+
+            request.onload = function() {
+                var data  = JSON.parse(this.response);
+                var quote = data.content;
+                var author = data.author;
+                console.log(quote);
+                document.getElementById("quote").innerHTML=quote;
+                document.getElementById("author").innerHTML=author;
+            };
+            request.send();
+        }
+    </script>
+</head>
+
+<body onload="getQuote()">
+    <h1>Daily Quote</h1>
+    <h2 id="quote"> sentence </h2>
+    <h3 id="author"> person </h3>
+    <button onclick="getQuote()">Get Another</button>
+</body>
+
+</html>
