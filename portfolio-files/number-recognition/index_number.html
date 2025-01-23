@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number Recognition Model - Michael Jhin</title>
     <link rel="stylesheet" href="styles_number.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="number_recog.js" defer> </script>
 </head>
 <body>
     <header>
@@ -12,22 +14,39 @@
     </header>
 
     <nav>
-        <a href="../index.html">Home</a>
-        <a href="../about.html">About</a>
-        <a href="../portfolio.html" class="active">Portfolio</a>
-        <a href="../resume.html">Resume</a>
-        <a href="../contact.html">Contact</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../about.html">About</a>
+        <a href="../../portfolio.html" class="active">Portfolio</a>
+        <a href="../../resume.html">Resume</a>
+        <a href="../../contact.html">Contact</a>
     </nav>
-
-    
 
 
     <main>
         <section>
-            <h2>Hello World</h2>
-            <p><!-- Add smth here --></p>
+            <h2>Handwritten Digit Recognizer</h1>
+            <p>Draw a digit (0-9) in the box below, and the AI will predict it!</p>
+        </section>
+
+
+        <canvas id="canvas" width="280" height="280"></canvas>
+        <div class="controls">
+            <button onclick="clearCanvas()">Clear</button>
+            <button onclick="predictDigit()">Predict</button>
+        </div>
+        <div id="result" class="result">Hi</div>
+
+
+
+        <section>
+            <p>
+                This is a description!
+            </p>
         </section>
     </main>
+
+
+
 
     <footer>
         <p>© 2025 Michael Jhin. All rights reserved.</p>
