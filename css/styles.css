@@ -25,6 +25,15 @@ header p {
     font-size: 1.2rem;
 }
 
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+main section {
+    margin-bottom: 2rem;
+}
+
 /* Navigation Bar */
 nav {
     background-color: #333; 
@@ -47,19 +56,16 @@ nav a:hover { /* Hovering color */
     background-color: #000; 
 }
 
-
-main {
-    padding: 2rem;
-    text-align: center;
-}
-
-main section {
-    margin-bottom: 2rem;
-}
-
+/* At the bottom of each page */
 footer {
     text-align: center;
     margin: 2rem 0 1rem;
     font-size: 0.9rem;
     color: #555;
 }
+
+/* To have all images resize when browser size changes */
+img {
+    width: 100%;
+    height: auto;
+  }
