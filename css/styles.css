@@ -6,13 +6,13 @@ body {
     background-color: #fff;
     color: #000;
     line-height: 1.6;
+    text-align: center;
 }
 
 header {
     background: #000;
     color: #fff;
     padding: 1rem 0;
-    text-align: center;
 }
 
 header h1 {
@@ -27,26 +27,29 @@ header p {
 
 main {
     padding: 2rem;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main section {
     margin-bottom: 2rem;
 }
+main section p {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
 
 /* Navigation Bar */
 nav {
     background-color: #333; 
-    overflow: hidden; 
     display: flex;
     justify-content: center;
 }
 nav a {
     color: white; 
-    text-align: center;
     padding: 14px 16px; 
     text-decoration: none;
-    display: inline-block; 
     font-size: 1rem;
 }
 nav a:hover { /* Hovering color */
@@ -56,6 +59,42 @@ nav a:hover { /* Hovering color */
     background-color: #000; 
 }
 
+/* To have all images resize when browser size changes */
+img {
+    width: 100%;
+    height: auto;    
+}
+
+
+.about-item {
+    display: flex;
+    align-items: center; /* Aligns text and image vertically */
+    gap: 20px; /* Space between image and text */
+    max-width: 900px; /* Adjust width for layout control */
+    margin: auto; /* Centers the section */
+    text-align: left; /* Ensures text aligns properly */
+}
+
+.about-image {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+
+
+/* Contact page icons will recenter with text */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+.contact-item img {
+    width: 35px;
+    height: 35px;
+}
+
 /* At the bottom of each page */
 footer {
     text-align: center;
@@ -63,9 +102,3 @@ footer {
     font-size: 0.9rem;
     color: #555;
 }
-
-/* To have all images resize when browser size changes */
-img {
-    width: 100%;
-    height: auto;
-  }
